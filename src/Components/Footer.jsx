@@ -43,29 +43,29 @@ const Footer = () => {
                 </div>
                 <div>
                   <div className="text-lg font-bold pb-3">
-                  <h2>Shop Categories</h2>
+                  <h2>Customer Service</h2>
                 </div>
                 <div>
                   <ul>
-                    <li>Shop Catalog</li>
-                    <li>Special Deals</li>
-                    <li>Gift Cards</li>
-                    <li>Trending</li>
-                    <li>What's New</li>
+                    <li>Track Order</li>
+                    <li>Help & FAQ</li>
+                    <li>Returns</li>
+                    <li>Shipping Policy</li>
+                    <li>Contact Us</li>
                   </ul>
                 </div>
                 </div>
                 <div>
                   <div className="text-lg font-bold pb-3">
-                  <h2>Shop Categories</h2>
+                  <h2>About & Legal</h2>
                 </div>
                 <div>
                   <ul>
-                    <li>Shop Catalog</li>
-                    <li>Special Deals</li>
-                    <li>Gift Cards</li>
-                    <li>Trending</li>
-                    <li>What's New</li>
+                    <li>About ShopNest</li>
+                    <li>Careers</li>
+                    <li>Sustainability</li>
+                    <li>Privacy Policy</li>
+                    <li>Terms of Service</li>
                   </ul>
                 </div>
                 </div>
