@@ -1,82 +1,55 @@
 import { Mail, MessageSquareText, Share2, ShoppingBag } from "lucide-react"
 
+const columns = [
+  { title: "Shop Categories", links: ["Shop Catalog", "Special Deals", "Gift Cards", "Trending", "What's New"] },
+  { title: "Customer Service", links: ["Track Order", "Help & FAQ", "Returns", "Shipping Policy", "Contact Us"] },
+  { title: "About & Legal", links: ["About ShopNest", "Careers", "Sustainability", "Privacy Policy", "Terms of Service"] },
+]
 
 const Footer = () => {
   return (
-    <div className='bg-gray-100 flex justify-center items-center '>
-      <div>
-        <div className="w-300 h-80  flex justify-center items-center">
-            <div className="w-1/3">
-                <div>
-                  <a href="#" className="flex items-center text-2xl gap-2.5 ">
-                    <div className="w-10 h-10 rounded-xl bg-blue-600 text-white flex items-center justify-center text-on-primary shadow-sm group-hover:scale-105 transition-transform">
-                      <ShoppingBag/>
-                    </div>
-                    <div>
-                      <span className="text-headline-md font-bold tracking-tight text-primary">ShopNest</span>
-                    </div>
-                 </a>
-                </div>
-                <div className="p-4">
-                   ShopNest provides modern retail curation for refined living. Discover verified hardware, timeless apparel, and contemporary living spaces with seamless delivery.
-                </div>
-                <div className="flex gap-5">
-                  <div className="p-2 bg-gray-300 w-fit rounded"><Share2 size={16} strokeWidth={2.25} /></div>
-                  <div className="p-2 bg-gray-300 w-fit rounded"><MessageSquareText size={16} strokeWidth={2.25} /></div>
-                  <div className="p-2 bg-gray-300 w-fit rounded"><Mail size={16} strokeWidth={2.25} /></div>
-                </div>
+    <div className="flex items-center justify-center bg-gray-100 px-4">
+      <div className="w-full max-w-7xl">
+        <div className="flex flex-col gap-8 py-10 md:flex-row md:items-center md:gap-6">
+          {/* Brand */}
+          <div className="w-full md:w-1/3">
+            <a href="#" className="flex items-center gap-2.5 text-2xl">
+              <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-blue-600 text-white shadow-sm transition-transform group-hover:scale-105">
+                <ShoppingBag />
+              </div>
+              <span className="text-headline-md font-bold tracking-tight text-primary">ShopNest</span>
+            </a>
+            <div className="py-4 pr-4">
+              ShopNest provides modern retail curation for refined living. Discover verified hardware, timeless apparel, and contemporary living spaces with seamless delivery.
             </div>
-            <div className="w-2/3 flex gap-10 items-center justify-evenly">
-                <div>
-                  <div className="text-lg font-bold pb-3">
-                  <h2>Shop Categories</h2>
-                </div>
-                <div>
-                  <ul>
-                    <li>Shop Catalog</li>
-                    <li>Special Deals</li>
-                    <li>Gift Cards</li>
-                    <li>Trending</li>
-                    <li>What's New</li>
-                  </ul>
-                </div>
-                </div>
-                <div>
-                  <div className="text-lg font-bold pb-3">
-                  <h2>Customer Service</h2>
-                </div>
-                <div>
-                  <ul>
-                    <li>Track Order</li>
-                    <li>Help & FAQ</li>
-                    <li>Returns</li>
-                    <li>Shipping Policy</li>
-                    <li>Contact Us</li>
-                  </ul>
-                </div>
-                </div>
-                <div>
-                  <div className="text-lg font-bold pb-3">
-                  <h2>About & Legal</h2>
-                </div>
-                <div>
-                  <ul>
-                    <li>About ShopNest</li>
-                    <li>Careers</li>
-                    <li>Sustainability</li>
-                    <li>Privacy Policy</li>
-                    <li>Terms of Service</li>
-                  </ul>
-                </div>
-                </div>
+            <div className="flex gap-5">
+              <div className="w-fit rounded bg-gray-300 p-2"><Share2 size={16} strokeWidth={2.25} /></div>
+              <div className="w-fit rounded bg-gray-300 p-2"><MessageSquareText size={16} strokeWidth={2.25} /></div>
+              <div className="w-fit rounded bg-gray-300 p-2"><Mail size={16} strokeWidth={2.25} /></div>
             </div>
-         </div>
-          <div className="w-full pb-10 border-t border-gray-300"></div>
-          <div className="flex justify-center items-center text-sm p-3">
-            © 2024 ShopNest Inc. All rights reserved.
           </div>
+
+          {/* Links */}
+          <div className="grid w-full grid-cols-2 gap-8 sm:grid-cols-3 md:w-2/3">
+            {columns.map((col) => (
+              <div key={col.title}>
+                <h2 className="pb-3 text-lg font-bold">{col.title}</h2>
+                <ul>
+                  {col.links.map((link) => (
+                    <li key={link}>{link}</li>
+                  ))}
+                </ul>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        <div className="w-full border-t border-gray-300"></div>
+        <div className="flex items-center justify-center p-3 text-center text-sm">
+          © 2024 ShopNest Inc. All rights reserved.
+        </div>
       </div>
-  </div>
+    </div>
   )
 }
 

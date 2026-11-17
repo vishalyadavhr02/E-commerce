@@ -71,7 +71,7 @@ function RatingCard({ review }) {
 
 export default function Reviews() {
   return (
-    <section className="mx-auto max-w-6xl px-4 py-">
+    <section className="mx-auto max-w-6xl px-4 py-8">
       <h2 className="mb-8 text-center text-3xl font-bold">
         What Our Customers Say
       </h2>

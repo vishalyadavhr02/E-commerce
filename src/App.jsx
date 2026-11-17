@@ -7,6 +7,7 @@ import Deals from './Components/Deals'
 import Rating from './Components/Rating'
 import Discount from './Components/Discount'
 import Footer from './Components/Footer'
+import CartDrawer from './Components/CartDrawer'
 
 
 
@@ -21,6 +22,7 @@ const App = () => {
       <Rating/>
       <Discount/>
       <Footer/>
+      <CartDrawer/>
     </div>
   )
 }
